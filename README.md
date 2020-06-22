@@ -1,12 +1,12 @@
-# CLI Image Classifier
-Command line image classifier written in Pytorch . 
+# CL Img Classifier
+Command line image classifier written in Pytorch. Requires category to label mapping json file. See 'cat_to_name' json for default specs.
 
 
 ## Running training script
 
 `python train.py 'path to data directory'`
 
-### Train cl arguments options and defaults
+#### Train cl arguments options and defaults
 
 Data directory: `--save_path` default='./flowers/'
 
@@ -22,7 +22,7 @@ Save path: `--save_path` default=./checkpoint.pth
 
 `python predict.py 'path to output directory'`
 
-### Predict cl arguments options and defaults
+#### Predict cl arguments options and defaults
 
 Model checkpoint path: `--checkpoint_path` default='./checkpoint.pth'
 
