@@ -53,5 +53,5 @@ test_image = utils.process_image(image_path)
 # predict based on image we recieved from last processing step
 top_prob, top_labels, top_classes = utils.predict(cat_to_name, test_image, model, k_val)
 
-# print all probabilities and flower names
+# print all probabilities and class names
 print("Prediction: {}\nProbability: {}".format(top_classes, top_prob))
