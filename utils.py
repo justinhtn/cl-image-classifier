@@ -13,7 +13,7 @@ import copy
 import time
 from tqdm import tqdm
 
-def data_load(where = './flowers'):
+def data_load(where = './classes'):
     '''
     Takes in path to data, returns loaders for training, validation
     and test sets.
@@ -320,7 +320,7 @@ def predict(img, cat_to_name, model, topk=1):
         # some confusing dictionary hopping
         idx_to_class = {value: key for key, value in model.class_to_idx.items()}
         top_labels = [idx_to_class[labels] for labels in top_labels]
-        top_flowers = [cat_to_name[labels] for labels in top_labels]
+        top_classes = [cat_to_name[labels] for labels in top_labels]
         
         
-    return(top_prob, top_labels, top_flowers)
+    return(top_prob, top_labels, top_classes)
