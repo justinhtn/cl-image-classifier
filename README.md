@@ -8,7 +8,7 @@ Command line image classifier written in Pytorch. Requires category to label map
 
 #### Train cl arguments options and defaults
 
-Data directory: `--save_path` default='./flowers/'
+Data directory: `--save_path` default='./classes/'
 
 Learning rate: `--lr` default=0.003
 
@@ -26,7 +26,7 @@ Save path: `--save_path` default=./checkpoint.pth
 
 Model checkpoint path: `--checkpoint_path` default='./checkpoint.pth'
 
-Image to predict path: `--image_path` default='flowers/test/1/image_06760.jpg'
+Image to predict path: `--image_path` default='classes/test/1/image_06760.jpg'
 
 K likely classes to return: `--k` default=1
 
