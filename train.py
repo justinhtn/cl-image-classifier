@@ -12,7 +12,7 @@ import utils
 
 # bringing in arguments from the command line
 ap = argparse.ArgumentParser(description='train.py')
-ap.add_argument('data_directory', nargs='*', action='store', default='./flowers/')
+ap.add_argument('data_directory', nargs='*', action='store', default='./classes/')
 ap.add_argument('--save_path', action='store', default='./checkpoint.pth')
 ap.add_argument('--arch', action='store', default='vgg16')
 ap.add_argument('--lr', action='store', default=0.003)
