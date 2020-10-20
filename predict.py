@@ -16,7 +16,7 @@ torch.manual_seed(0)
 # bringing in arguments from the command line
 ap = argparse.ArgumentParser(description='predict.py')
 ap.add_argument('--checkpoint_path', action='store', default='./checkpoint.pth')
-ap.add_argument('--image_path', action='store', default= 'flowers/test/1/image_06760.jpg')
+ap.add_argument('--image_path', action='store', default= 'classes/test/1/image_06760.jpg')
 ap.add_argument('--k', action='store', default=1)
 ap.add_argument('--device', action='store', default = 'cuda')
 ap.add_argument('--categories', action='store', default = 'cat_to_name.json')
@@ -51,7 +51,7 @@ image_path = image_path
 test_image = utils.process_image(image_path)
 
 # predict based on image we recieved from last processing step
-top_prob, top_labels, top_flowers = utils.predict(cat_to_name, test_image, model, k_val)
+top_prob, top_labels, top_classes = utils.predict(cat_to_name, test_image, model, k_val)
 
 # print all probabilities and flower names
-print("Prediction: {}\nProbability: {}".format(top_flowers, top_prob))
+print("Prediction: {}\nProbability: {}".format(top_classes, top_prob))
